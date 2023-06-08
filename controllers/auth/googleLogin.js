@@ -3,9 +3,9 @@ const { createError } = require("../../helpers");
 const User=require("../../models/user")
 ///const { loginAuthSchema } = require("../../validation/joiValidation");
 const jwt = require("jsonwebtoken");
-const dotenv=require("dotenv");
-dotenv.config();
-const {SECRET_KEY}=process.env
+// const dotenv=require("dotenv");
+// dotenv.config();
+// const {SECRET_KEY}=process.env
 const googleLogin = async (req, res,next) => {
   console.log("google login ",req.body)
      try {
@@ -27,7 +27,7 @@ const googleLogin = async (req, res,next) => {
         const payload = {
             id:auth._id
         }
-        const token= jwt.sign(payload,SECRET_KEY,{expiresIn:"1h"})
+        const token= jwt.sign(payload,process.env.SECRET_KEY,{expiresIn:"1h"})
         await User.findByIdAndUpdate(auth._id,{token})  
       res.json({
             token:token,

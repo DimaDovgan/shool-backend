@@ -1,11 +1,11 @@
 const querystring = require('node:querystring');
 
- const {GOOGLE_CLIENT_ID, BASE_URL} = process.env;
+//  const {GOOGLE_CLIENT_ID, BASE_URL} = process.env;
 
 const googleAuth = async (req, res) => {
     console.log("foront is good and googleAuth")
     const stringifiedParams = querystring.stringify({
-        client_id: GOOGLE_CLIENT_ID,
+        client_id: process.env.GOOGLE_CLIENT_ID,
         redirect_uri: "http://localhost:3002/api/users/google-redirect",
         scope: [
             'https://www.googleapis.com/auth/userinfo.email',

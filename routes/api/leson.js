@@ -2,7 +2,7 @@ const express = require('express');
 const ctrl=require("../../controllers/leson")
  const { auth } = require("../../middlewares");
  const router = express.Router();
- const cloudinary=require("../../helpers/cloudinary");
+ //const cloudinary=require("../../helpers/cloudinary");
 const uploader = require("../../helpers/multer");
 
 // DB_host = mongodb+srv://Dima:BUVu1QfgRgpjb1RZ@cluster0.trx80dd.mongodb.net/db-contacts?retryWrites=true&w=majority

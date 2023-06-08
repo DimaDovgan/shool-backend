@@ -5,8 +5,8 @@ const { registerAuthSchema } = require("../../validation/joiValidation");
 const gravatar = require("gravatar");
 
 //const jwt = require("jsonwebtoken");
-const dotenv=require("dotenv");
-dotenv.config();
+// const dotenv=require("dotenv");
+// dotenv.config();
 //const {SECRET_KEY}=process.env
 
 const register = async (req, res, next) => {
