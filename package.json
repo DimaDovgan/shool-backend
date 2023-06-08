@@ -30,6 +30,7 @@
     "mv": "^2.1.1",
     "path": "^0.12.7",
     "query-string": "^8.1.0",
+    "querystring": "^0.2.1",
     "uniqid": "^5.4.0"
   },
   "devDependencies": {
