@@ -3,14 +3,14 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-
+const cors = require('cors');
 
 // // const fileUpload=require('express-fileupload');
 
 
 const indexRouter = require('./routes/api/leson');
 const usersRouter = require('./routes/api/auth');
-//  const cors = require('cors');
+ 
 
 const app = express();
 
@@ -19,9 +19,9 @@ const app = express();
 // // app.set('views', path.join(__dirname, 'views'));
 // // app.set('view engine', 'ejs');
 
-// // app.use(cors({
-// //   origin: '*'
-// // }));
+app.use(cors({
+  origin: '*'
+}));
 // app.use(cors());
 // app.use(function(req,res,next){
 //   res.header("Access-Control-Allow-Origin","*");
