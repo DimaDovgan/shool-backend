@@ -26,6 +26,7 @@ app.use(cors({
 // app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/api/leson', indexRouter);
 // app.use('/api/users', usersRouter);
+app.use('/api/test', (res,req)=>{res.json("Test work")});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
