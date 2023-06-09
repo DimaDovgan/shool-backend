@@ -1,4 +1,4 @@
-const queryString= require('node:querystring');
+const queryString= require('querystring');
 const axios = require("axios");
 const jwt = require('jsonwebtoken');
 
