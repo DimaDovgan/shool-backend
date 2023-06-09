@@ -3,10 +3,12 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+
+
 // // const fileUpload=require('express-fileupload');
 
 
-const indexRouter = require('./routes/api/leson');
+//const indexRouter = require('./routes/api/leson');
 const usersRouter = require('./routes/api/auth');
 //  const cors = require('cors');
 
