@@ -73,9 +73,10 @@ app.get('/', (req, res) => {
 })
 
 app.use(function(err, req, res, next) {
+  console.log("error")
   res.locals.message = err.message;
   res.status(err.status || 500);
-  res.render('error');
+  res.json(err.message);
 });
 
 module.exports = app;
