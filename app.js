@@ -72,4 +72,10 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
+app.use(function(err, req, res, next) {
+  res.locals.message = err.message;
+  res.status(err.status || 500);
+  res.render('error');
+});
+
 module.exports = app;
