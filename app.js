@@ -1,4 +1,4 @@
-// var createError = require('http-errors');
+  const createError = require('http-errors');
 // var express = require('express');
 // var path = require('path');
 // var cookieParser = require('cookie-parser');
@@ -65,6 +65,10 @@
 
 
 
+
+
+
+
 const express = require('express')
 const app = express()
 
@@ -76,6 +80,12 @@ app.get('/test', (req, res) => {
   console.log("OKK TEST")
   res.send('Hello World! TEST')
 })
+
+//catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  console.log("req",req)
+  next(createError(404));
+});
 
 app.use(function(err, req, res, next) {
   console.log("error")
