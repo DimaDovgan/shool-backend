@@ -1,4 +1,4 @@
-const createError = require("./helpers");
+//const createError = require("./helpers");
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
@@ -6,8 +6,8 @@ const logger = require('morgan');
 // // const fileUpload=require('express-fileupload');
 
 
-// // var indexRouter = require('./routes/api/leson');
-// // var usersRouter = require('./routes/api/auth');
+const indexRouter = require('./routes/api/leson');
+const usersRouter = require('./routes/api/auth');
 //  const cors = require('cors');
 
 const app = express();
@@ -38,11 +38,11 @@ const app = express();
  app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
  app.use(express.static(path.join(__dirname, 'public')));
-// // app.use('/api/leson', indexRouter);
-// // app.use('/api/users', usersRouter);
-app.get('/test', (req, res) => {
-  res.send('Hello World!')
-})
+app.use('/api/leson', indexRouter);
+app.use('/api/users', usersRouter);
+// app.get('/test', (req, res) => {
+//   res.send('Hello World!')
+// })
 
 // // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
