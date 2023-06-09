@@ -8,7 +8,7 @@ const logger = require('morgan');
 // // const fileUpload=require('express-fileupload');
 
 
-//const indexRouter = require('./routes/api/leson');
+const indexRouter = require('./routes/api/leson');
 const usersRouter = require('./routes/api/auth');
 //  const cors = require('cors');
 
@@ -40,7 +40,7 @@ const app = express();
  app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
  app.use(express.static(path.join(__dirname, 'public')));
-//app.use('/api/leson', indexRouter);
+app.use('/api/leson', indexRouter);
 app.use('/api/users', usersRouter);
 // app.get('/test', (req, res) => {
 //   res.send('Hello World!')
