@@ -6,7 +6,7 @@ const googleAuth = async (req, res) => {
     console.log("foront is good and googleAuth")
     const stringifiedParams = querystring.stringify({
         client_id: process.env.GOOGLE_CLIENT_ID,
-        redirect_uri: "http://localhost:3002/api/users/google-redirect",
+        redirect_uri: "https://online-school-gzzo.onrender.com/api/users/google-redirect",
         scope: [
             'https://www.googleapis.com/auth/userinfo.email',
             'https://www.googleapis.com/auth/userinfo.profile'
