@@ -72,6 +72,10 @@ app.get('/', (req, res) => {
   console.log("OKK")
   res.send('Hello World!')
 })
+app.get('/test', (req, res) => {
+  console.log("OKK TEST")
+  res.send('Hello World! TEST')
+})
 
 app.use(function(err, req, res, next) {
   console.log("error")
